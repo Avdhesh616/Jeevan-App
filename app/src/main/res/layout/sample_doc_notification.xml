@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundedittext"
+    android:layout_marginTop="3dp"
+    android:backgroundTint="#E1CCFB"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#E1CCFB"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="5dp"
+            android:src="@drawable/bg1"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/usernametextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lastmessagetextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Accept to chat"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/chatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:padding="20dp"
+
+            android:text="Chat"
+            app:backgroundTint="#008175"
+            app:backgroundTintMode="screen"
+            android:background="@drawable/chatbtngradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="20dp"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="#E1CCFB"
+        android:gravity="center"
+        android:padding="4dp"
+        >
+
+        <Button
+            android:id="@+id/acceptBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            app:backgroundTint="#C2E817"
+            app:backgroundTintMode="screen"
+            android:background="@drawable/acceptbtngradient"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Accept" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decline"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            app:backgroundTint="#F63434"
+            app:backgroundTintMode="screen"
+            android:background="@drawable/declinebtngradient"
+            tools:targetApi="lollipop"
+            android:id="@+id/declineBtn"/>
+    </LinearLayout>
+</LinearLayout>
